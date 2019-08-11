@@ -36,4 +36,4 @@ export class TableListComponent implements OnInit {
   searchText;
   documents = new Documents().getDocuments();
 
-}
+} 
