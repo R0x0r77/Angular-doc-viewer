@@ -2,7 +2,7 @@
   <div class="container-fluid">
       <div class="row">
           <div class="col-md-12">
-              <div class="card">
+              <!-- <div class="card">
                   <div class="card-header card-header-primary">
                     <h4 class="card-title ">Available documents and legislations</h4>
                     <p class="card-category"> filter through all documents using search text-box</p>
@@ -20,12 +20,6 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <!-- <ng-container>
-                                        <documents-viewer [fileName]="'doc5.docx'"></documents-viewer>
-                                    </ng-container> -->
-                                    <!-- <ng-container>
-                                            <ngx-doc-viewer [url]="'..\files\doc5.docx'" viewer="google" style="width:100%;height:50vh;"></ngx-doc-viewer>
-                                    </ng-container> -->
                                     <tr *ngFor="let document of documents | filter:searchText">
                                         <td>{{document.id}}</td>
                                         <td>
@@ -36,7 +30,18 @@
                             </table>
                       </div>
                   </div>
-              </div>
+              </div> -->
+              <div class="card">
+                <div class="card-header card-header-primary">
+                  <h4 class="card-title ">Available documents in the system</h4>
+                  <p class="card-category">Search for documents and open/edit them</p>
+                </div>
+                <div class="card-body">
+                      <div class="table-responsive">
+                          <documents-list-wrapped></documents-list-wrapped>
+                    </div>
+                </div>
+            </div>
           </div>
       </div>
   </div>

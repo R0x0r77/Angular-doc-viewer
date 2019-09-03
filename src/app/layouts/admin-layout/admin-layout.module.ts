@@ -27,6 +27,10 @@ import { MyDialogComponent } from 'app/components-extra/my-dialog/my-dialog.comp
 import { ConfirmationDialogComponent } from 'app/components-extra/confirmation-dialog/confirmation-dialog.component';
 // import { DocumentsViewerComponent } from 'app/components-extra/documents-viewer/documents-viewer.component';
 import { NgxDocViewerModule } from 'ngx-doc-viewer';
+import { QuillModule } from 'ngx-quill';
+import { DocumentsListSearcherComponent } from 'app/documents-list-wrapped/documents-list-searcher/documents-list-searcher.component';
+import { ReadyQuillEditorComponent } from 'app/documents-list-wrapped/ready-quill-editor/ready-quill-editor.component';
+import { DocumentsListWrappedComponent } from 'app/documents-list-wrapped/documents-list-wrapped.component';
 
 
 
@@ -44,7 +48,8 @@ import { NgxDocViewerModule } from 'ngx-doc-viewer';
     MatTooltipModule,
     MaterialModule,
     Ng2SearchPipeModule,
-    NgxDocViewerModule
+    NgxDocViewerModule,
+    QuillModule.forRoot()
   ],
   declarations: [
     DashboardComponent,
@@ -57,7 +62,10 @@ import { NgxDocViewerModule } from 'ngx-doc-viewer';
     UpgradeComponent,
     // DocumentsViewerComponent,
     MyDialogComponent,
-    ConfirmationDialogComponent
+    ConfirmationDialogComponent,
+    ReadyQuillEditorComponent,
+    DocumentsListSearcherComponent,
+    DocumentsListWrappedComponent
   ],
   entryComponents: [
     MyDialogComponent,

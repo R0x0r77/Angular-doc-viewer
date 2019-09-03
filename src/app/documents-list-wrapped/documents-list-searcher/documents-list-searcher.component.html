@@ -1,0 +1,28 @@
+<div class="container text-center">
+    <h1>Documents list</h1>
+  </div>
+  <div class="container">
+      <div class="search-documents">
+        <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off" placeholder="&#xF002;  Search documents"> 
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-primary mt-3" (click)="openAllDocuments()">show/refresh list</button>
+      </div>
+      <table class="table table-striped">
+        <thead>
+        <tr>
+          <!-- <th>Id</th> -->
+          <th>&nbsp;&nbsp; Title</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let document of documents | filter:searchText">
+            <!-- <td>{{document.id}}</td> -->
+            <td>
+              <button mat-button color="primary" (click)="openDocument(document.id)">{{document.title}}</button>
+              <!-- <mat-radio-button (click)="openDocument(document.id)">{{document.title}}</mat-radio-button> -->
+            </td>
+        </tr>
+        </tbody>
+      </table>
+  </div>
